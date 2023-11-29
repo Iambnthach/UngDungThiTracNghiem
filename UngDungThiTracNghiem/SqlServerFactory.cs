@@ -15,7 +15,7 @@ namespace UngDungThiTracNghiem
         }
         public string getStringConnection()
         {
-            return "Data Source=IAMBNTHACH\\MSSQLSERVER01;Initial Catalog=UDTTN;Integrated Security=True;Encrypt=False";
+            return "Data Source=IAMBNTHACH\\MSSQLSERVER01;Initial Catalog=UDTTN;Integrated Security=True";
         }
         public SqlCommand GetCommand(string query, Dictionary<string, object> paramList)
         {

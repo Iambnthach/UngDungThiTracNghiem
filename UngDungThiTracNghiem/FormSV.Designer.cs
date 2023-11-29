@@ -1,6 +1,6 @@
 ﻿namespace UngDungThiTracNghiem
 {
-    partial class Form1
+    partial class FormSV
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSV));
             this.p_login = new System.Windows.Forms.Panel();
-            this.btn_dangnhap = new System.Windows.Forms.Button();
-            this.l_submatkhau = new System.Windows.Forms.Label();
             this.tb_matkhau = new System.Windows.Forms.TextBox();
             this.tb_mssv = new System.Windows.Forms.TextBox();
+            this.btn_dangnhap = new System.Windows.Forms.Button();
+            this.l_submatkhau = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,10 +62,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_back = new System.Windows.Forms.Button();
             this.p_thi = new System.Windows.Forms.Panel();
+            this.l_subcauhoi = new System.Windows.Forms.Label();
             this.l_cauhoi = new System.Windows.Forms.Label();
             this.btn_cautruocdo = new System.Windows.Forms.Button();
             this.btn_cautieptheo = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.p_radiobtn = new System.Windows.Forms.Panel();
             this.rb_4 = new System.Windows.Forms.RadioButton();
             this.rb_3 = new System.Windows.Forms.RadioButton();
             this.rb_2 = new System.Windows.Forms.RadioButton();
@@ -73,8 +74,6 @@
             this.l_cau = new System.Windows.Forms.Label();
             this.l_title = new System.Windows.Forms.Label();
             this.btn_nopbai = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.p_button = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.l_clock = new System.Windows.Forms.Label();
             this.t_clock = new System.Windows.Forms.Timer(this.components);
@@ -83,15 +82,15 @@
             this.p_xacnhanthongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.p_thi.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.p_radiobtn.SuspendLayout();
             this.SuspendLayout();
             // 
             // p_login
             // 
-            this.p_login.Controls.Add(this.btn_dangnhap);
-            this.p_login.Controls.Add(this.l_submatkhau);
             this.p_login.Controls.Add(this.tb_matkhau);
             this.p_login.Controls.Add(this.tb_mssv);
+            this.p_login.Controls.Add(this.btn_dangnhap);
+            this.p_login.Controls.Add(this.l_submatkhau);
             this.p_login.Controls.Add(this.label4);
             this.p_login.Controls.Add(this.label3);
             this.p_login.Controls.Add(this.label1);
@@ -102,6 +101,21 @@
             this.p_login.TabIndex = 0;
             this.p_login.Paint += new System.Windows.Forms.PaintEventHandler(this.p_login_Paint);
             this.p_login.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
+            // 
+            // tb_matkhau
+            // 
+            this.tb_matkhau.Location = new System.Drawing.Point(110, 198);
+            this.tb_matkhau.Name = "tb_matkhau";
+            this.tb_matkhau.Size = new System.Drawing.Size(222, 22);
+            this.tb_matkhau.TabIndex = 7;
+            this.tb_matkhau.TextChanged += new System.EventHandler(this.tb_matkhau_TextChanged_1);
+            // 
+            // tb_mssv
+            // 
+            this.tb_mssv.Location = new System.Drawing.Point(110, 154);
+            this.tb_mssv.Name = "tb_mssv";
+            this.tb_mssv.Size = new System.Drawing.Size(222, 22);
+            this.tb_mssv.TabIndex = 6;
             // 
             // btn_dangnhap
             // 
@@ -127,21 +141,6 @@
             this.l_submatkhau.TabIndex = 4;
             this.l_submatkhau.Text = "            ";
             // 
-            // tb_matkhau
-            // 
-            this.tb_matkhau.Location = new System.Drawing.Point(146, 198);
-            this.tb_matkhau.Name = "tb_matkhau";
-            this.tb_matkhau.Size = new System.Drawing.Size(212, 22);
-            this.tb_matkhau.TabIndex = 3;
-            this.tb_matkhau.TextChanged += new System.EventHandler(this.tb_matkhau_TextChanged);
-            // 
-            // tb_mssv
-            // 
-            this.tb_mssv.Location = new System.Drawing.Point(146, 154);
-            this.tb_mssv.Name = "tb_mssv";
-            this.tb_mssv.Size = new System.Drawing.Size(212, 22);
-            this.tb_mssv.TabIndex = 3;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -154,7 +153,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 154);
+            this.label3.Location = new System.Drawing.Point(51, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 2;
@@ -422,22 +421,29 @@
             // 
             // p_thi
             // 
+            this.p_thi.Controls.Add(this.l_subcauhoi);
             this.p_thi.Controls.Add(this.l_cauhoi);
             this.p_thi.Controls.Add(this.btn_cautruocdo);
             this.p_thi.Controls.Add(this.btn_cautieptheo);
-            this.p_thi.Controls.Add(this.panel2);
+            this.p_thi.Controls.Add(this.p_radiobtn);
             this.p_thi.Controls.Add(this.l_cau);
             this.p_thi.Controls.Add(this.l_title);
             this.p_thi.Controls.Add(this.btn_nopbai);
-            this.p_thi.Controls.Add(this.comboBox1);
-            this.p_thi.Controls.Add(this.p_button);
             this.p_thi.Controls.Add(this.label11);
             this.p_thi.Controls.Add(this.l_clock);
-            this.p_thi.Location = new System.Drawing.Point(12, 11);
+            this.p_thi.Location = new System.Drawing.Point(10, 12);
             this.p_thi.Name = "p_thi";
             this.p_thi.Size = new System.Drawing.Size(1065, 501);
             this.p_thi.TabIndex = 8;
             this.p_thi.Paint += new System.Windows.Forms.PaintEventHandler(this.p_thi_Paint);
+            // 
+            // l_subcauhoi
+            // 
+            this.l_subcauhoi.AutoSize = true;
+            this.l_subcauhoi.Location = new System.Drawing.Point(83, 143);
+            this.l_subcauhoi.Name = "l_subcauhoi";
+            this.l_subcauhoi.Size = new System.Drawing.Size(0, 16);
+            this.l_subcauhoi.TabIndex = 10;
             // 
             // l_cauhoi
             // 
@@ -472,17 +478,18 @@
             this.btn_cautieptheo.UseVisualStyleBackColor = true;
             this.btn_cautieptheo.Click += new System.EventHandler(this.btn_cautieptheo_Click);
             // 
-            // panel2
+            // p_radiobtn
             // 
-            this.panel2.Controls.Add(this.rb_4);
-            this.panel2.Controls.Add(this.rb_3);
-            this.panel2.Controls.Add(this.rb_2);
-            this.panel2.Controls.Add(this.rb_1);
-            this.panel2.Location = new System.Drawing.Point(83, 182);
-            this.panel2.MaximumSize = new System.Drawing.Size(500, 300);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(500, 227);
-            this.panel2.TabIndex = 8;
+            this.p_radiobtn.Controls.Add(this.rb_4);
+            this.p_radiobtn.Controls.Add(this.rb_3);
+            this.p_radiobtn.Controls.Add(this.rb_2);
+            this.p_radiobtn.Controls.Add(this.rb_1);
+            this.p_radiobtn.Location = new System.Drawing.Point(83, 182);
+            this.p_radiobtn.MaximumSize = new System.Drawing.Size(500, 300);
+            this.p_radiobtn.Name = "p_radiobtn";
+            this.p_radiobtn.Size = new System.Drawing.Size(500, 227);
+            this.p_radiobtn.TabIndex = 8;
+            this.p_radiobtn.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // rb_4
             // 
@@ -494,6 +501,7 @@
             this.rb_4.TabStop = true;
             this.rb_4.Text = "radioButton1";
             this.rb_4.UseVisualStyleBackColor = true;
+            this.rb_4.CheckedChanged += new System.EventHandler(this.rb_4_CheckedChanged);
             // 
             // rb_3
             // 
@@ -505,6 +513,7 @@
             this.rb_3.TabStop = true;
             this.rb_3.Text = "radioButton1";
             this.rb_3.UseVisualStyleBackColor = true;
+            this.rb_3.CheckedChanged += new System.EventHandler(this.rb_3_CheckedChanged);
             // 
             // rb_2
             // 
@@ -516,6 +525,7 @@
             this.rb_2.TabStop = true;
             this.rb_2.Text = "radioButton1";
             this.rb_2.UseVisualStyleBackColor = true;
+            this.rb_2.CheckedChanged += new System.EventHandler(this.rb_2_CheckedChanged);
             // 
             // rb_1
             // 
@@ -527,6 +537,7 @@
             this.rb_1.TabStop = true;
             this.rb_1.Text = "answer1";
             this.rb_1.UseVisualStyleBackColor = true;
+            this.rb_1.CheckedChanged += new System.EventHandler(this.rb_1_CheckedChanged);
             // 
             // l_cau
             // 
@@ -557,52 +568,37 @@
             this.btn_nopbai.TabIndex = 4;
             this.btn_nopbai.Text = "NỘP BÀI";
             this.btn_nopbai.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Tất cả",
-            "Số câu chưa chọn",
-            "Số câu đã chọn"});
-            this.comboBox1.Location = new System.Drawing.Point(769, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(260, 24);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // p_button
-            // 
-            this.p_button.Location = new System.Drawing.Point(769, 120);
-            this.p_button.Name = "p_button";
-            this.p_button.Size = new System.Drawing.Size(260, 301);
-            this.p_button.TabIndex = 2;
+            this.btn_nopbai.Click += new System.EventHandler(this.btn_nopbai_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label11.Location = new System.Drawing.Point(766, 36);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(638, 102);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 17);
+            this.label11.Size = new System.Drawing.Size(163, 32);
             this.label11.TabIndex = 1;
             this.label11.Text = "THỜI GIAN:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // l_clock
             // 
             this.l_clock.AutoSize = true;
-            this.l_clock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.l_clock.Location = new System.Drawing.Point(896, 28);
+            this.l_clock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_clock.Location = new System.Drawing.Point(807, 102);
             this.l_clock.Name = "l_clock";
-            this.l_clock.Size = new System.Drawing.Size(90, 25);
+            this.l_clock.Size = new System.Drawing.Size(126, 32);
             this.l_clock.TabIndex = 0;
             this.l_clock.Text = "60:00:00";
             this.l_clock.Click += new System.EventHandler(this.l_clock_Click);
             // 
             // t_clock
             // 
-            this.t_clock.Tick += new System.EventHandler(this.l_clock_Click);
+            this.t_clock.Enabled = true;
+            this.t_clock.Interval = 1000;
+            this.t_clock.Tick += new System.EventHandler(this.t_clock_click);
             // 
-            // Form1
+            // FormSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -610,7 +606,7 @@
             this.Controls.Add(this.p_thi);
             this.Controls.Add(this.p_xacnhanthongtin);
             this.Controls.Add(this.p_login);
-            this.Name = "Form1";
+            this.Name = "FormSV";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.p_login.ResumeLayout(false);
@@ -621,8 +617,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.p_thi.ResumeLayout(false);
             this.p_thi.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.p_radiobtn.ResumeLayout(false);
+            this.p_radiobtn.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -632,8 +628,6 @@
         private System.Windows.Forms.Panel p_login;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_matkhau;
-        private System.Windows.Forms.TextBox tb_mssv;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_dangnhap;
@@ -664,11 +658,9 @@
         private System.Windows.Forms.Label l_submonthi;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Timer t_clock;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Panel p_button;
         private System.Windows.Forms.Label l_title;
         private System.Windows.Forms.Button btn_nopbai;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel p_radiobtn;
         private System.Windows.Forms.RadioButton rb_4;
         private System.Windows.Forms.RadioButton rb_3;
         private System.Windows.Forms.RadioButton rb_2;
@@ -677,6 +669,9 @@
         private System.Windows.Forms.Label l_cau;
         private System.Windows.Forms.Button btn_cautruocdo;
         private System.Windows.Forms.Button btn_cautieptheo;
+        private System.Windows.Forms.TextBox tb_matkhau;
+        private System.Windows.Forms.TextBox tb_mssv;
+        private System.Windows.Forms.Label l_subcauhoi;
     }
 }
 
