@@ -433,7 +433,7 @@
             this.p_thi.Controls.Add(this.l_clock);
             this.p_thi.Location = new System.Drawing.Point(10, 12);
             this.p_thi.Name = "p_thi";
-            this.p_thi.Size = new System.Drawing.Size(1065, 501);
+            this.p_thi.Size = new System.Drawing.Size(1071, 501);
             this.p_thi.TabIndex = 8;
             this.p_thi.Paint += new System.Windows.Forms.PaintEventHandler(this.p_thi_Paint);
             // 

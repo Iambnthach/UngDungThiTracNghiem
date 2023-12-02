@@ -23,7 +23,6 @@ namespace UngDungThiTracNghiem
         private int currentQuestionIndex = 0;
         int diem = 0;
         private List<Button> buttons;
-        private int selectedAnswerIndex = -1;
         private bool isAnswerSelected = false;
         private List<string> danhsachcautrl;
 
@@ -65,7 +64,6 @@ namespace UngDungThiTracNghiem
         {
             List<CauHoi> list = getListQuestion();
             isAnswerSelected = false;
-            selectedAnswerIndex = -1;
             l_cau.Text = "Cau " + (index + 1).ToString();
             l_cauhoi.Text = list[index].NoiDungCauHoi;
             rb_1.Text = list[index].CauTrl1;
@@ -264,7 +262,7 @@ namespace UngDungThiTracNghiem
                     }
                     btn_cautruocdo.Visible = false;
 
-                   
+
                     List<CauHoi> list = getListQuestion();
                     var cauhoidautien = list.ElementAt(0);
                     l_cau.Text = "Cau 1";
@@ -274,12 +272,12 @@ namespace UngDungThiTracNghiem
                     rb_3.Text = cauhoidautien.CauTrl3;
                     rb_4.Text = cauhoidautien.CauTrl4;
 
-                    
+
 
                 }
 
             }
-            
+
         }
         public List<CauHoi> getListQuestion()
         {
@@ -339,9 +337,10 @@ namespace UngDungThiTracNghiem
 
         private void l_clock_Click(object sender, EventArgs e)
         {
-            
+
 
         }
+        List<string> danhsachvitricautraloi = new List<string>();
         private void btn_cautieptheo_Click(object sender, EventArgs e)
         {
             List<CauHoi> list = getListQuestion();
@@ -358,6 +357,10 @@ namespace UngDungThiTracNghiem
                     currentQuestionIndex++;
                     ShowAction(currentQuestionIndex);
                     btn_cautruocdo.Visible = true;
+                    rb_1.Checked = false;
+                    rb_2.Checked = false;
+                    rb_3.Checked = false;
+                    rb_4.Checked = false;
                     if (currentQuestionIndex == list.Count - 1)
                     {
 
@@ -367,18 +370,25 @@ namespace UngDungThiTracNghiem
                     if (rb_1.Checked)
                     {
                         danhsachcautrl.Add(rb_1.Text);
+                        danhsachvitricautraloi.Add(rb_1.Text);
                     }
                     else if (rb_2.Checked)
                     {
                         danhsachcautrl.Add(rb_2.Text);
+                        danhsachvitricautraloi.Add(rb_2.Text);
+
                     }
                     else if (rb_3.Checked)
                     {
                         danhsachcautrl.Add(rb_3.Text);
+                        danhsachvitricautraloi.Add(rb_3.Text);
+
                     }
                     else
                     {
                         danhsachcautrl.Add(rb_4.Text);
+                        danhsachvitricautraloi.Add(rb_4.Text);
+
                     }
 
                 }
@@ -411,18 +421,33 @@ namespace UngDungThiTracNghiem
 
                 l_cau.Text = "Cau " + (currentQuestionIndex + 1).ToString();
                 l_cauhoi.Text = list[currentQuestionIndex].NoiDungCauHoi.ToString();
+                
                 rb_1.Text = list[currentQuestionIndex].CauTrl1.ToString();
                 rb_2.Text = list[currentQuestionIndex].CauTrl2.ToString();
                 rb_3.Text = list[currentQuestionIndex].CauTrl3.ToString();
                 rb_4.Text = list[currentQuestionIndex].CauTrl4.ToString();
+                danhsachvitricautraloi.Reverse();
+
+                if (rb_1.Text.CompareTo(danhsachvitricautraloi[currentQuestionIndex]) == 0)
+                {
+                    rb_1.Checked = true;
+                }
+                else if (rb_2.Text.CompareTo(danhsachvitricautraloi[currentQuestionIndex]) == 0)
+                {
+                    rb_2.Checked = true;
+
+                }
+                else if (rb_3.Text.CompareTo(danhsachvitricautraloi[currentQuestionIndex]) == 0)
+                {
+                    rb_3.Checked = true;
+
+                }
+                else
+                    rb_4.Checked = true;
 
 
             }
             else btn_cautruocdo.Visible = false;
-            rb_1.Checked = false;
-            rb_2.Checked = false;
-            rb_3.Checked = false;
-            rb_4.Checked = false;
         }
 
 
@@ -451,10 +476,10 @@ namespace UngDungThiTracNghiem
 
             var list = getListQuestion();
             double? tongdiem = 0;
-            for(int i = 0; i < list.Count - 1; i++)
+            for (int i = 0; i < list.Count - 1; i++)
             {
-                
-                for(int j = 0; j < list.Count - 1; j++)
+
+                for (int j = 0; j < list.Count - 1; j++)
                 {
                     if (danhsachcautrl[i].CompareTo(list[j].CauTrlDung) == 0)
                     {
@@ -472,7 +497,7 @@ namespace UngDungThiTracNghiem
             db.KetQuas.InsertOnSubmit(a);
             db.SubmitChanges();
         }
-        
+
         private void tb_mssv_TextChanged(object sender, EventArgs e)
         {
 
@@ -495,42 +520,21 @@ namespace UngDungThiTracNghiem
 
         private void rb_1_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_1.Checked)
-            {
-                rb_1.FlatAppearance.BorderColor = Color.Green;
-                isAnswerSelected = true;
-                selectedAnswerIndex = 0;
-            }
+            
         }
 
         private void rb_2_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_2.Checked)
-            {
-                rb_2.FlatAppearance.BorderColor = Color.Green;
-                isAnswerSelected = true;
-                selectedAnswerIndex = 1;
-            }
         }
 
         private void rb_3_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_3.Checked)
-            {
-                rb_3.FlatAppearance.BorderColor = Color.Green;
-                isAnswerSelected = true;
-                selectedAnswerIndex = 2;
-            }
+           
         }
 
         private void rb_4_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_4.Checked)
-            {
-                rb_4.FlatAppearance.BorderColor = Color.Green;
-                isAnswerSelected = true;
-                selectedAnswerIndex = 3;
-            }
+           
         }
 
         private void p_button_Paint(object sender, PaintEventArgs e)
@@ -551,13 +555,13 @@ namespace UngDungThiTracNghiem
         private void t_clock_click(object sender, EventArgs e)
         {
             l_clock.Text = "60:00";
-            if(totalsecond > 0)
+            if (totalsecond > 0)
             {
                 totalsecond--;
                 int minites = totalsecond / 60;
                 int second = totalsecond - (minites * 60);
-                l_clock.Text=minites.ToString()+":"+second.ToString();
-                l_clock.ForeColor=Color.Red;
+                l_clock.Text = minites.ToString() + ":" + second.ToString();
+                l_clock.ForeColor = Color.Red;
             }
             else
             {
