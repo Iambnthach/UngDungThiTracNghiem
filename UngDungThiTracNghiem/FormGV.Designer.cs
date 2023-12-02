@@ -60,6 +60,7 @@
             this.p_suadiem.Name = "p_suadiem";
             this.p_suadiem.Size = new System.Drawing.Size(773, 426);
             this.p_suadiem.TabIndex = 3;
+            this.p_suadiem.Paint += new System.Windows.Forms.PaintEventHandler(this.p_suadiem_Paint);
             // 
             // p_dangnhap
             // 

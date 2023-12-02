@@ -59,5 +59,10 @@ namespace UngDungThiTracNghiem
         {
             tb_mk.PasswordChar = '*';
         }
+
+        private void p_suadiem_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
