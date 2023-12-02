@@ -97,7 +97,7 @@
             this.p_login.Controls.Add(this.pictureBox1);
             this.p_login.Location = new System.Drawing.Point(12, 12);
             this.p_login.Name = "p_login";
-            this.p_login.Size = new System.Drawing.Size(1069, 501);
+            this.p_login.Size = new System.Drawing.Size(931, 501);
             this.p_login.TabIndex = 0;
             this.p_login.Paint += new System.Windows.Forms.PaintEventHandler(this.p_login_Paint);
             this.p_login.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
