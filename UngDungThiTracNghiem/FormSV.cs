@@ -160,7 +160,6 @@ namespace UngDungThiTracNghiem
                         cbb_monthi.ValueMember = "Ma";
                         masosv = tb_mssv.Text;
                     }
-
                 }
             }
             else l_submatkhau.Text = "Tài khoản hoặc mật khẩu chưa đúng";
@@ -342,6 +341,7 @@ namespace UngDungThiTracNghiem
             
 
         }
+        List<string> danhsachvitricautrl=new List<string>();
         private void btn_cautieptheo_Click(object sender, EventArgs e)
         {
             List<CauHoi> list = getListQuestion();
@@ -352,6 +352,10 @@ namespace UngDungThiTracNghiem
             }
             else
             {
+                rb_1.Checked=false;
+                rb_2.Checked=false;
+                rb_3.Checked=false;
+                rb_4.Checked=false;
                 l_subcauhoi.Visible = false;
                 if (currentQuestionIndex < list.Count - 1)
                 {
@@ -367,18 +371,25 @@ namespace UngDungThiTracNghiem
                     if (rb_1.Checked)
                     {
                         danhsachcautrl.Add(rb_1.Text);
+                        danhsachvitricautrl.Add(rb_1.Text);
                     }
                     else if (rb_2.Checked)
                     {
                         danhsachcautrl.Add(rb_2.Text);
+                        danhsachvitricautrl.Add(rb_2.Text);
+
                     }
                     else if (rb_3.Checked)
                     {
                         danhsachcautrl.Add(rb_3.Text);
+                        danhsachvitricautrl.Add(rb_3.Text);
+
                     }
                     else
                     {
                         danhsachcautrl.Add(rb_4.Text);
+                        danhsachvitricautrl.Add(rb_4.Text);
+
                     }
 
                 }
@@ -415,14 +426,25 @@ namespace UngDungThiTracNghiem
                 rb_2.Text = list[currentQuestionIndex].CauTrl2.ToString();
                 rb_3.Text = list[currentQuestionIndex].CauTrl3.ToString();
                 rb_4.Text = list[currentQuestionIndex].CauTrl4.ToString();
+                if (rb_1.Text.CompareTo(danhsachvitricautrl[currentQuestionIndex]) == 0)
+                {
+                    rb_1.Checked = true;
+                }else if (rb_2.Text.CompareTo(danhsachvitricautrl[currentQuestionIndex]) == 0)
+                {
+                    rb_2.Checked = true;
+
+                }
+                else if (rb_3.Text.CompareTo(danhsachvitricautrl[currentQuestionIndex]) == 0)
+                {
+                    rb_3.Checked = true;
+                }else if (rb_4.Text.CompareTo(danhsachvitricautrl[currentQuestionIndex]) == 0)
+                {
+                    rb_4.Checked = true;
+                }
 
 
             }
             else btn_cautruocdo.Visible = false;
-            rb_1.Checked = false;
-            rb_2.Checked = false;
-            rb_3.Checked = false;
-            rb_4.Checked = false;
         }
 
 

@@ -32,6 +32,13 @@
             this.txt_MaGV = new System.Windows.Forms.TextBox();
             this.txt_TenGV = new System.Windows.Forms.TextBox();
             this.p_suadiem = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_MaLopGacThi = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_GioiTInh = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_NgaySinh = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.p_dangnhap = new System.Windows.Forms.Panel();
@@ -42,13 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_mk = new System.Windows.Forms.TextBox();
             this.tb_ms = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_NgaySinh = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_GioiTInh = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_MaLopGacThi = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sinhvien)).BeginInit();
             this.p_suadiem.SuspendLayout();
             this.p_dangnhap.SuspendLayout();
@@ -99,9 +99,74 @@
             this.p_suadiem.Controls.Add(this.txt_TenGV);
             this.p_suadiem.Location = new System.Drawing.Point(12, 12);
             this.p_suadiem.Name = "p_suadiem";
-            this.p_suadiem.Size = new System.Drawing.Size(934, 556);
+            this.p_suadiem.Size = new System.Drawing.Size(940, 556);
             this.p_suadiem.TabIndex = 3;
             this.p_suadiem.Paint += new System.Windows.Forms.PaintEventHandler(this.p_suadiem_Paint);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.IndianRed;
+            this.label9.Location = new System.Drawing.Point(349, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(320, 29);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Thông tin giáo viên gác thi";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(645, 113);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 16);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Mã lớp gác thi:";
+            // 
+            // txt_MaLopGacThi
+            // 
+            this.txt_MaLopGacThi.Enabled = false;
+            this.txt_MaLopGacThi.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MaLopGacThi.Location = new System.Drawing.Point(746, 111);
+            this.txt_MaLopGacThi.Name = "txt_MaLopGacThi";
+            this.txt_MaLopGacThi.Size = new System.Drawing.Size(157, 22);
+            this.txt_MaLopGacThi.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(645, 67);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 16);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Giới tính:";
+            // 
+            // txt_GioiTInh
+            // 
+            this.txt_GioiTInh.Enabled = false;
+            this.txt_GioiTInh.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_GioiTInh.Location = new System.Drawing.Point(746, 65);
+            this.txt_GioiTInh.Name = "txt_GioiTInh";
+            this.txt_GioiTInh.Size = new System.Drawing.Size(157, 22);
+            this.txt_GioiTInh.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(158, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Ngày sinh";
+            // 
+            // txt_NgaySinh
+            // 
+            this.txt_NgaySinh.Enabled = false;
+            this.txt_NgaySinh.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NgaySinh.Location = new System.Drawing.Point(269, 167);
+            this.txt_NgaySinh.Name = "txt_NgaySinh";
+            this.txt_NgaySinh.Size = new System.Drawing.Size(157, 22);
+            this.txt_NgaySinh.TabIndex = 6;
             // 
             // label6
             // 
@@ -201,71 +266,6 @@
             this.tb_ms.Name = "tb_ms";
             this.tb_ms.Size = new System.Drawing.Size(337, 38);
             this.tb_ms.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(158, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Ngày sinh";
-            // 
-            // txt_NgaySinh
-            // 
-            this.txt_NgaySinh.Enabled = false;
-            this.txt_NgaySinh.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NgaySinh.Location = new System.Drawing.Point(269, 167);
-            this.txt_NgaySinh.Name = "txt_NgaySinh";
-            this.txt_NgaySinh.Size = new System.Drawing.Size(157, 22);
-            this.txt_NgaySinh.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(645, 67);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 16);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Giới tính:";
-            // 
-            // txt_GioiTInh
-            // 
-            this.txt_GioiTInh.Enabled = false;
-            this.txt_GioiTInh.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_GioiTInh.Location = new System.Drawing.Point(746, 65);
-            this.txt_GioiTInh.Name = "txt_GioiTInh";
-            this.txt_GioiTInh.Size = new System.Drawing.Size(157, 22);
-            this.txt_GioiTInh.TabIndex = 8;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(645, 113);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 16);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Mã lớp gác thi:";
-            // 
-            // txt_MaLopGacThi
-            // 
-            this.txt_MaLopGacThi.Enabled = false;
-            this.txt_MaLopGacThi.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaLopGacThi.Location = new System.Drawing.Point(746, 111);
-            this.txt_MaLopGacThi.Name = "txt_MaLopGacThi";
-            this.txt_MaLopGacThi.Size = new System.Drawing.Size(157, 22);
-            this.txt_MaLopGacThi.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.IndianRed;
-            this.label9.Location = new System.Drawing.Point(349, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(320, 29);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Thông tin giáo viên gác thi";
             // 
             // FormGV
             // 

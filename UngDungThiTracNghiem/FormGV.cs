@@ -46,14 +46,13 @@ namespace UngDungThiTracNghiem
 
             server = new SqlServerFactory();
 
-            string acc = tb_ms.Text;
-            string password = tb_mk.Text;
             string query_sv = "Select MaSV, TenSV, GioiTInh, MaLop from SinhVien";
 
             
             SqlCommand cmd_sv = server.GetCommand(query_sv, new Dictionary<string, object>
             {
             });
+
 
             server.con.Open();
 

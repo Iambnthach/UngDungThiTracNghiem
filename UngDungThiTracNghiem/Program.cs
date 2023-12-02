@@ -16,8 +16,8 @@ namespace UngDungThiTracNghiem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormGV());
             //Application.Run(new FormGV());
+            Application.Run(new FormSV());
         }
     }
 }

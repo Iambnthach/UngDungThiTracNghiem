@@ -97,7 +97,7 @@
             this.p_login.Controls.Add(this.pictureBox1);
             this.p_login.Location = new System.Drawing.Point(12, 12);
             this.p_login.Name = "p_login";
-            this.p_login.Size = new System.Drawing.Size(931, 501);
+            this.p_login.Size = new System.Drawing.Size(1081, 501);
             this.p_login.TabIndex = 0;
             this.p_login.Paint += new System.Windows.Forms.PaintEventHandler(this.p_login_Paint);
             this.p_login.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
@@ -207,7 +207,7 @@
             this.p_xacnhanthongtin.Controls.Add(this.btn_back);
             this.p_xacnhanthongtin.Location = new System.Drawing.Point(12, 12);
             this.p_xacnhanthongtin.Name = "p_xacnhanthongtin";
-            this.p_xacnhanthongtin.Size = new System.Drawing.Size(1066, 498);
+            this.p_xacnhanthongtin.Size = new System.Drawing.Size(1078, 498);
             this.p_xacnhanthongtin.TabIndex = 6;
             this.p_xacnhanthongtin.Paint += new System.Windows.Forms.PaintEventHandler(this.p_xacnhanthongtin_Paint);
             // 
@@ -433,7 +433,7 @@
             this.p_thi.Controls.Add(this.l_clock);
             this.p_thi.Location = new System.Drawing.Point(10, 12);
             this.p_thi.Name = "p_thi";
-            this.p_thi.Size = new System.Drawing.Size(1065, 501);
+            this.p_thi.Size = new System.Drawing.Size(1080, 501);
             this.p_thi.TabIndex = 8;
             this.p_thi.Paint += new System.Windows.Forms.PaintEventHandler(this.p_thi_Paint);
             // 
